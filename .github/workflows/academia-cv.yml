@@ -1,0 +1,63 @@
+name: Academia CV
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cv-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download source files
+        uses: actions/checkout@v6
+
+      - name: Compile CV
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: main.tex
+          # Uncomment ONE line below if needed:
+          # latexmk_use_xelatex: true
+          # latexmk_use_lualatex: true
+
+      - name: Prepare public PDF
+        run: |
+          mkdir -p public
+          cp main.pdf public/CV.pdf
+          cat > public/index.html <<'HTML'
+          <!doctype html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <title>Guillaume Huber — CV</title>
+            <meta http-equiv="refresh" content="0; url=CV.pdf">
+          </head>
+          <body><a href="CV.pdf">View CV</a></body>
+          </html>
+          HTML
+
+      - name: Upload website files
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish PDF
+        id: deployment
+        uses: actions/deploy-pages@v4
