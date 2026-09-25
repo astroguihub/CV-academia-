@@ -1,0 +1,315 @@
+% Academic CV template for Guillaume Huber
+% Compile with pdfLaTeX on Overleaf.
+% Standalone version: no external .cls file required.
+
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=0.85in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlist[itemize]{leftmargin=*, topsep=2pt, itemsep=2pt, parsep=0pt}
+\renewcommand{\arraystretch}{1.12}
+
+\definecolor{cvblue}{RGB}{30,70,120}
+
+\titleformat{\section}
+  {\large\bfseries\color{cvblue}}
+  {}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+
+\newcommand{\cvheading}[4]{%
+  \textbf{#1} \hfill #2\\
+  \textit{#3} \hfill \textit{#4}\par
+}
+
+\newcommand{\cvsubheading}[2]{%
+  \textbf{#1} \hfill #2\par
+}
+
+\newcommand{\publication}[4]{%
+  \item #1. ``#2.'' \textit{#3}. #4.
+}
+
+\begin{document}
+
+% =========================
+% Header
+% =========================
+
+{\LARGE \textbf{Guillaume Huber}}\\[-1pt]
+Graduate Student in Astronomy, Institute for Astronomy, University of Hawai`i at M\=anoa\\
+Hilo, HI, USA \; | \; \href{mailto:ghuber@hawaii.edu}{ghuber@hawaii.edu} \; | \; +1 (631) 708--1965\\
+% Optional: add website, ADS profile, ORCID, GitHub, LinkedIn
+% \href{https://your-website.com}{your-website.com} \; | \; \href{https://orcid.org/XXXX-XXXX-XXXX-XXXX}{ORCID: XXXX-XXXX-XXXX-XXXX}
+
+
+
+
+
+
+
+
+% =========================
+% Research profile
+% =========================
+
+\section{Research Interests}
+Astronomical instrumentation; UV-visible-NIR detector development; photon-counting and ultra-low-background detector systems; high-contrast imaging for exoplanets; optical and polarimetric instrumentation; precursor science and instrumentation for the Habitable Worlds Observatory.
+
+
+
+
+
+
+
+
+% =========================
+% Education
+% =========================
+
+\section{Education}
+
+\cvheading{University of Hawai`i at M\=anoa, Institute for Astronomy}{2022--present}{Ph.D. student in Astronomy, M.Sc. in Astronomy}{Honolulu / Hilo, HI, USA}
+\begin{itemize}
+  \item Thesis topic: near-infrared arrays and target selection for the Habitable Worlds Observatory.
+  \item Advisor: Prof. Michael Bottom
+  \item Research areas: infrared detector characterization, astronomical instrumentation, polarimetry, high-contrast imaging, and target selection for future space missions.
+\end{itemize}
+
+\cvheading{Institut d'Optique Graduate School / Universit\'e Paris-Saclay}{2019--2022}{M.Eng. in Applied Physics, Optics and Photonics}{Palaiseau, France}
+\begin{itemize}
+  \item Coursework in optical instrumentation, Fourier optics, polarimetry, signal and image processing, quantum optics, radiometry, detection systems, lasers, optical fibers, and applied photonics.
+  \item GPA: 4.36/4.5; graduated top 10\%.
+\end{itemize}
+
+\cvheading{Panthéon-Sorbonne University}{2021--2022}{First-year B.A. coursework in Philosophy}{Paris, France}
+\begin{itemize}
+  \item Coursework in general philosophy, philosophy of science, history of philosophy, and practical philosophy.
+\end{itemize}
+
+\cvheading{Classes Pr\'eparatoires aux Grandes \'Ecoles}{2017--2019}{B.Sc.-level intensive track in Mathematics and Physics}{Sophia Antipolis, Nantes, Rennes, France}
+\begin{itemize}
+  \item Highly selective preparatory program with intensive coursework in mathematics, physics, engineering, computer science, chemistry, and philosophy.
+\end{itemize}
+
+
+
+
+
+
+
+
+% =========================
+% Research appointments
+% =========================
+
+\section{Research Experience}
+
+\cvheading{Detector Characterization for Low-Signal Astronomy}{Aug. 2022--present}{Institute for Astronomy, University of Hawai`i - UC Berkeley}{Advisor: Prof. Michael Bottom}
+\begin{itemize}
+  \item Characterize large-format linear-mode avalanche photodiode (LmAPD) arrays for ultra-low-signal near-infrared astronomy and future astronomical observatories, including the Habitable Worlds Observatory.
+  \item Develop laboratory experiments and analysis pipelines for detector characterization (gain, read noise, dark current, glow, persistence, and single-photon event detection).
+  \item Analyze laboratory and telescope datasets; build simulations and statistical tools for detector performance assessment.
+  \item Collaborate with academic partners (RIT, MIT, UC Berkeley), NASA, and industry partners (Leonardo UK, Hawaii Aerospace); presented related work at SPIE Astronomical Telescopes + Instrumentation, astronomy and HWO-related conferences, and detector workshops.
+\end{itemize}
+
+\cvheading{Target Selection for the Habitable Worlds Observatory}{Oct. 2024--present}{Institute for Astronomy, University of Hawai`i}{Advisors: Prof. Michael Bottom}
+\begin{itemize}
+  \item Search for binary companions in potential HWO target systems using Robo-AO-2 observations from the UH 88-inch telescope on Mauna Kea.
+  \item Contribute to the instrument commissioning and its infrared data-processing pipeline
+  \item Contribute to the HWO target-selection working group.
+\end{itemize}
+
+\cvheading{Dual-Wavelength Spectropolarimeter for Solar Astronomy}{Summer 2021; Aug. 2022--2024}{Institute for Astronomy, University of Hawai`i}{Advisor: Prof. Haosheng Lin}
+\begin{itemize}
+  \item Designed and demonstrated a single-channel dual-wavelength polarimetric concept using optical modeling, Mueller-matrix analysis, and laboratory validation.
+  \item Built Python simulations and experimental performance tests for the polarimeter proof of concept.
+  \item First-year project awarded the IfA Achievement Scholarship.
+\end{itemize}
+
+\cvheading{Starspots on Main-Sequence Superflaring Stars}{2023-2024}{Institute for Astronomy, University of Hawai`i}{Advisor: Prof. Haosheng Lin}
+\begin{itemize}
+  \item Measure stellar spot temperatures and magnetic-field diagnostics using TESS photometry and high-resolution infrared spectroscopy.
+  \item Awarded observing time as Principal Investigator on NASA IRTF.
+\end{itemize}
+
+\cvheading{Optical Engineering for Greenhouse-Gas Earth Observation}{Mar.--June 2022}{SRON Netherlands Institute for Space Research}{Advisor: Dr. Ryan Cooney}
+\begin{itemize}
+  \item Contributed to an ESA-funded project for characterization of near-infrared cameras for the TANGO mission.
+  \item Installed and evaluated a cleanroom sensor-testing setup involving cryogenic cooling and ultra-low-pressure conditions.
+  \item Modeled thermal background and optical performance for infrared detector testing.
+\end{itemize}
+
+\cvheading{Hypertelescope Optical Design and Simulation}{July--Nov. 2021}{Hypertelescope LISE}{Advisors: Prof. Antoine Labeyrie; Prof. Thierry L\'epine}
+\begin{itemize}
+  \item Studied coma-aberration correction in a multi-pupil hypertelescope optical design.
+  \item Developed Fourier-optics simulations in Python to model hypertelescope image formation.
+\end{itemize}
+
+% Optional: keep only if applying to instrumentation-heavy academic or engineering roles.
+\cvheading{Junior Engineer Consulting}{2021--2022}{Valeo; Somfy}{France}
+\begin{itemize}
+  \item Characterized polymer automotive lenses, including focal length, surface geometry, thickness, and aberration measurements.
+  \item Performed 3D photometric characterization and environmental performance tests of an embedded infrared detector system for home automation.
+\end{itemize}
+
+
+
+
+
+
+
+
+% =========================
+% Publications
+% =========================
+
+\section{Publications}
+% Replace placeholder author lists with full citation format when available.
+% Recommended format: authors, year, title, journal/proceedings, volume, pages, DOI/arXiv/ADS link.
+
+\subsection*{Published / Accepted}
+\begin{enumerate}[leftmargin=*, label={[P\arabic*]}]
+  \publication
+{Huber, G. et al}
+{Glow reduction of ultra-low noise LmAPDs: towards photon-counting infrared arrays}
+{SPIE Journal of Astronomical Telescopes, Instruments, and Systems}
+{2024. \href{https://ui.adsabs.harvard.edu/abs/2024SPIE13103E..20H/abstract}{ADS}}
+\publication{Huber, G. et al}{Recent characterization results of LmAPDs: towards photon-counting infrared arrays for HWO}{HWO 2025 Conference Proceedings}{2026. \href{https://ui.adsabs.harvard.edu/abs/2026ASPC..543..345H/abstract}{ADS}}
+  \publication{Huber, G., Lin, H}{Simultaneous multi-wavelength polarimetry without spectral splitting: proof of concept of a single-channel dual-wavelength polarimeter}{SPIE Journal of Astronomical Telescopes, Instruments, and Systems}{2024.  \href{https://ui.adsabs.harvard.edu/abs/2024SPIE13100E..3DH/abstract}{ADS}}
+  \publication{Claveau, C.-A. et al}{Progress towards a megapixel linear-mode avalanche photodiode array for ultra-low-background shortwave infrared astronomy}{SPIE Journal of Astronomical Telescopes, Instruments, and Systems}{2024. \href{https://ui.adsabs.harvard.edu/abs/2024arXiv241109185C/abstract}{ADS}}
+  \publication{Baranec, C. et al}{Robo-AO-2: entering the era of automated science operations, hybrid wavefront sensing, and adaptive secondary integration}{SPIE Journal of Astronomical Telescopes, Instruments, and Systems}{2026.  \href{https://ui.adsabs.harvard.edu/abs/2026arXiv260702826B/abstract}{ADS}}
+  \publication{Hartman Z. et al}{Paving the Road to the Habitable Worlds Observatory with High-resolution Imaging. I. New and Archival Speckle Observations of Potential HWO Target Stars}{The Astronomical Journal}{2026. \href{https://ui.adsabs.harvard.edu/abs/2026AJ....171..174H/abstract}{ADS}}
+  \publication{Marcussen M. et al}{The $\mu$ Herculis system solved after nearly three centuries}{Astronomy and Astrophysics}{2026. \href{https://doi.org/10.1051/0004-6361/202658981}{DOI}}
+  \publication{Hartman Z. et al}{Here Be Binaries: Examining Our Current Understanding of the Multiplicity Status of Nearby Potential HWO Targets}{HWO 2025 Conference Proceedings}{Submitted, 2025}
+\end{enumerate}
+
+\subsection*{Submitted / In Preparation}
+\begin{enumerate}[leftmargin=*, label={[S\arabic*]}]
+  \publication{Huber, G. et al}{Near-noiseless single-photon detection in the infrared with a megapixel semiconductor array for low-background astronomy}{Nature Astronomy - Publications of the Astronomical Society of the Pacific}{In preparation}
+  \publication{Huber, G. et al}{Persistence in Linear-mode Avalanche Photodiodes}{SPIE Journal of Astronomical Telescopes, Instruments, and Systems}{In preparation}
+  \publication{Huber, G., Lin, H}{Proof of concept of a novel spectropolarimeter}{Publications of the Astronomical Society of the Pacific}{In preparation}
+\end{enumerate}
+
+
+
+
+
+
+% =========================
+% Presentations
+% =========================
+
+\section{Conference Presentations and Workshops}
+% Split into Invited Talks, Contributed Talks, and Posters if the list becomes long.
+% Add exact titles, dates, locations, and whether each was a talk or poster.
+
+\begin{itemize}
+  \item SPIE Astronomical Telescopes + Instrumentation, 2024, Yokohama, Japan
+  \item Caltech Sagan Workshop, 2024, Pasadena, CA, USA
+  \item NASA Habitable Worlds Observatory Face-to-Face Meeting, 2024, Rochester, NY, USA
+  \item Habitable Worlds Observatory Conference, 2025, Washington, DC, USA
+  \item Scientific Detector Workshop, 2025, Canberra, Australia
+  \item Spirit of Lyot Conference, 2026, Pasadena, CA, USA
+\end{itemize}
+
+
+
+
+
+
+% =========================
+% Observing / proposals
+% =========================
+
+\section{Observing and Proposal Experience}
+\begin{itemize}
+    \item Principal Investigator, Robo-AO-2 observations of candidate HWO targets with the UH 88-inch telescope, Mauna Kea. 12 observing nights, survey of 508 targets.
+  \item Principal Investigator, NASA IRTF/iSHELL observing program on spectroscopy of stellar spots on Main Sequence stars. 5 observing half-nights, 8 targets.
+\end{itemize}
+
+
+
+
+
+
+% =========================
+% Teaching / mentoring
+% =========================
+
+\section{Teaching and Mentoring}
+\begin{itemize}
+  \item Private tutor in mathematics, physics, and English, 2019--2020.
+  \item Elementary school lecture on galactic and extra-galactic astronomy for the \textit{Journey Through the Universe} outreach program in Hilo
+\end{itemize}
+
+% =========================
+% Service / outreach
+% =========================
+
+\section{Service and Outreach}
+\begin{itemize}
+  \item Volunteering at IfA Open House, Astroday Hilo and Kona, and other outreach events
+  \item Help setting up a 50cm Planewave telescope at Waipahu high-school
+  \item Co-organizing \textit{Astronomy on Tap - Hawai`i}.
+  \item Teaching at \textit{Journey through the Universe} in Hilo.
+\end{itemize}
+
+% =========================
+% Awards
+% =========================
+
+\section{Awards and Scholarships}
+\begin{itemize}
+  \item Achievement Scholarship, Institute for Astronomy, University of Hawai`i, 2023. Merit award for the best first-year research project.
+  \item Paris-Saclay University Travel Scholarship, 2021. Merit scholarship supporting travel and research stay in Hawai`i.
+\end{itemize}
+
+% =========================
+% Technical skills
+% =========================
+
+\section{Technical Skills}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+Programming and data analysis & Python, MATLAB; basic IDL and C; scientific computing, statistical analysis, image processing, detector-data reduction.\\
+Optics and instrumentation & Optical alignment, cryogenic detector testing, polarimetry, Fourier optics, radiometry, laboratory automation, cleanroom sensor testing.\\
+Software & Zemax OpticStudio, basic SolidWorks, LaTeX, DS9, astropy, photutils, emcee\\
+Languages & French native; English fluent; German intermediate; Japanese beginner.\\
+\end{tabularx}
+
+% =========================
+% Optional professional experience
+% =========================
+
+\section{Selected Professional Experience}
+% Keep this section short in an academic CV unless applying to instrumentation or engineering-heavy roles.
+
+\cvsubheading{Co-founder and CTO, LensCare}{2019--2020}
+\begin{itemize}
+  \item Led technical research, prototyping, and early production for a student startup developing ecological contact-lens cases using UV-visible diode illumination.
+\end{itemize}
+
+% =========================
+% References
+% =========================
+
+\section{References}
+Available upon request.
+
+% Alternative for academic applications:
+% \begin{tabularx}{\textwidth}{@{}X X@{}}
+% Prof. Michael Bottom & Prof. Haosheng Lin\\
+% Institute for Astronomy, University of Hawai`i & Institute for Astronomy, University of Hawai`i\\
+% \href{mailto:...}{...} & \href{mailto:...}{...}\\
+% \end{tabularx}
+
+\end{document}
